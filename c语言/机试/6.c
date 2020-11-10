@@ -1,28 +1,30 @@
 #include <stdio.h>
-int main(void)
+int main (void)
 {
-    int n,i,j,a,b,t=0;
+    int n,j,a,b,c,t=0;
     printf("请输入一个整数：");
     scanf("%d",&n);
-    b=n;
+    c=n;
     do{
-        while(n>0){
-            j=n;
-            t=10*t;
-            a=n%10;
-            n=n/10;
-            t=a+t;
-        }
-        if(t==j)
+        n=n+1;
+        j=n;
+        t=0;
+        while(j>0)
         {
-            i=0;
+            t=t*10;
+            a=j%10;
+            t+=a;
+            j=j/10;
+        }
+        if(t==n)
+        {
+            b=0;
+            printf("比%d大的回文数是%d\n",c,n);
         }
         else
         {
-            i=1;
-            j=j+1;
+            b=1;
         }
-    }while(i==1);
-    printf("比%d大的回文数是：%d\n",b,j);
+    }while(b==1);
     return 0;
 }
