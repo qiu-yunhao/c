@@ -19,9 +19,8 @@ int main(void)
         {
             a=b;
             b=c;
-            x(a,b);
         }
-    }while(c==0);
+    }while(c!=0);
     printf("他们的最大公约数是%d\n",b);
     return 0;
 }

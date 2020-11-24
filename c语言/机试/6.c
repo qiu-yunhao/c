@@ -26,5 +26,6 @@ int main (void)
             b=1;
         }
     }while(b==1);
+    putchar(3);
     return 0;
 }
